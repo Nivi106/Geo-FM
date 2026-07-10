@@ -1,14 +1,12 @@
-# 🌍 Geo-FM: Multi-Temporal Flood Mapping Using Sentinel-2 NDWI Change Detection
+🌍 Geo-FM: Cloud-Ready Multi-Temporal Flood Mapping using Sentinel-2, Xarray, Dask and NDWI
 
-## 📌 Overview
+📌 Overview
 
 Geo-FM is a geospatial data engineering project demonstrating an end-to-end workflow for multi-temporal flood mapping using Sentinel-2 satellite imagery. The project focuses on scalable geospatial data preparation, quality assessment, representative sampling, cloud-ready raster storage, and flood extent mapping using NDWI change detection.
 
 The workflow integrates Google Earth Engine, Python, Xarray, Dask, Zarr, Rasterio, and QGIS to build a reproducible geospatial processing pipeline suitable for remote sensing and Earth observation applications.
 
----
-
-## 🎯 Objectives
+🎯 Objectives
 
 - Develop a scalable geospatial data engineering workflow
 - Automate metadata extraction and quality assessment
@@ -20,9 +18,8 @@ The workflow integrates Google Earth Engine, Python, Xarray, Dask, Zarr, Rasteri
 - Detect flood extent using multi-temporal NDWI
 - Visualize results using QGIS
 
----
 
-## 🛰️ Study Area
+🛰️ Study Area
 
 **Location:** Pakistan
 
@@ -30,17 +27,17 @@ The workflow integrates Google Earth Engine, Python, Xarray, Dask, Zarr, Rasteri
 
 **Application:** Flood Extent Mapping
 
----
 
-## 🌊 Flood Extent Map
+
+🌊 Flood Extent Map
 
 ![Flood Map](screenshots/FloodMap.png)
 
----
 
-## ⚙️ Workflow
 
-```text
+⚙️ Workflow
+
+
 Sentinel-2 Images
         │
         ▼
@@ -72,11 +69,11 @@ Flood Mask Generation
         │
         ▼
 QGIS Visualization
-```
 
----
 
-## 🛠 Technologies Used
+
+
+🛠 Technologies Used
 
 | Category | Technologies |
 |----------|--------------|
@@ -90,11 +87,11 @@ QGIS Visualization
 | Numerical Computing | NumPy |
 | Benchmarking | GeoPrepBench |
 
----
 
-## 📂 Repository Structure
 
-```
+ 📂 Repository Structure
+
+
 Geo-FM/
 │
 ├── config/
@@ -130,11 +127,9 @@ Geo-FM/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-```
 
----
 
-## 🔬 Methodology
+🔬 Methodology
 
 ### 1. Metadata Extraction
 
@@ -172,9 +167,9 @@ Flood extent was detected using multi-temporal NDWI change detection derived fro
 
 Flood extent maps were visualized and exported using QGIS.
 
----
 
-## 📊 Outputs
+
+📊 Outputs
 
 The project produces:
 
@@ -185,9 +180,9 @@ The project produces:
 - Binary Flood Mask
 - Flood Extent Map
 
----
 
-## 💡 Skills Demonstrated
+
+💡 Skills Demonstrated
 
 - Geospatial Data Engineering
 - Remote Sensing
@@ -201,9 +196,9 @@ The project produces:
 - Python Development
 - Reproducible Geospatial Workflows
 
----
 
-## 🚀 Future Improvements
+
+🚀 Future Improvements
 
 - Sentinel-1 SAR flood mapping
 - U-Net based flood segmentation
@@ -213,9 +208,9 @@ The project produces:
 - Automatic flood area estimation by administrative boundary
 - Interactive web map visualization
 
----
 
-## ▶️ How to Run
+
+ ▶️ How to Run
 
 ### Clone the repository
 
@@ -263,7 +258,7 @@ python src/geoprepbench.py
 python src/flood_mapping.py
 ```
 
----
+
 
 ## 👩‍💻 Author
 
@@ -271,7 +266,7 @@ python src/flood_mapping.py
 
 Geospatial Data Science | Remote Sensing | GIS | Python | Machine Learning
 
----
+
 
 ## ⭐ Acknowledgements
 

@@ -1,13 +1,46 @@
 # 🌍 Geo-FM: Multi-Temporal Flood Mapping Using Sentinel-2 NDWI Change Detection
 
-## Overview
+## 📌 Overview
 
-This project demonstrates an end-to-end geospatial data engineering workflow for flood extent mapping using Sentinel-2 satellite imagery.
+Geo-FM is a geospatial data engineering project demonstrating an end-to-end workflow for multi-temporal flood mapping using Sentinel-2 satellite imagery. The project focuses on scalable geospatial data preparation, quality assessment, representative sampling, cloud-ready raster storage, and flood extent mapping using NDWI change detection.
 
-The workflow includes metadata extraction, quality assessment, representative sampling, scalable raster processing using Xarray and Dask, cloud-ready storage using Zarr, GeoPrepBench benchmarking, flood detection using NDWI change detection, and visualization in QGIS.
+The workflow integrates Google Earth Engine, Python, Xarray, Dask, Zarr, Rasterio, and QGIS to build a reproducible geospatial processing pipeline suitable for remote sensing and Earth observation applications.
 
-## Project Workflow
+---
 
+## 🎯 Objectives
+
+- Develop a scalable geospatial data engineering workflow
+- Automate metadata extraction and quality assessment
+- Generate representative image samples
+- Build multidimensional raster data cubes
+- Perform parallel raster processing
+- Store datasets in cloud-ready Zarr format
+- Benchmark dataset quality using GeoPrepBench
+- Detect flood extent using multi-temporal NDWI
+- Visualize results using QGIS
+
+---
+
+## 🛰️ Study Area
+
+**Location:** Pakistan
+
+**Satellite:** Sentinel-2 Level-2A Surface Reflectance
+
+**Application:** Flood Extent Mapping
+
+---
+
+## 🌊 Flood Extent Map
+
+![Flood Map](screenshots/FloodMap.png)
+
+---
+
+## ⚙️ Workflow
+
+```text
 Sentinel-2 Images
         │
         ▼
@@ -26,10 +59,10 @@ Xarray Data Cube
 Parallel Processing with Dask
         │
         ▼
-Zarr Export
+Zarr Storage
         │
         ▼
-GeoPrepBench Validation
+GeoPrepBench Evaluation
         │
         ▼
 NDWI Change Detection
@@ -39,30 +72,50 @@ Flood Mask Generation
         │
         ▼
 QGIS Visualization
+```
 
-## Technologies Used
+---
 
-- Python
-- Google Earth Engine
-- QGIS
-- Rasterio
-- Rioxarray
-- Xarray
-- Dask
-- Zarr
-- NumPy
-- GeoPrepBench
+## 🛠 Technologies Used
 
+| Category | Technologies |
+|----------|--------------|
+| Programming | Python |
+| Cloud Platform | Google Earth Engine |
+| GIS | QGIS |
+| Raster Processing | Rasterio, Rioxarray |
+| Data Cubes | Xarray |
+| Parallel Computing | Dask |
+| Storage | Zarr |
+| Numerical Computing | NumPy |
+| Benchmarking | GeoPrepBench |
 
-## Repository Structure
+---
+
+## 📂 Repository Structure
+
+```
 Geo-FM/
-
+│
 ├── config/
+│
 ├── data/
 │   ├── raw/
 │   ├── metadata/
 │   ├── curated/
 │   └── benchmark/
+│
+├── docs/
+│
+├── outputs/
+│   ├── FloodMask.tif
+│   ├── NDWI.tif
+│   ├── metadata_report.csv
+│   ├── quality_report.csv
+│   └── geoprepbench_report.csv
+│
+├── screenshots/
+│   └── FloodMap.png
 │
 ├── src/
 │   ├── metadata.py
@@ -74,82 +127,155 @@ Geo-FM/
 │   ├── geoprepbench.py
 │   └── flood_mapping.py
 │
-├── outputs/
-├── screenshots/
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
+```
 
-## Methodology
+---
+
+## 🔬 Methodology
 
 ### 1. Metadata Extraction
 
-Image metadata was extracted to organize the dataset and improve reproducibility.
+Satellite image metadata were extracted to organize the dataset and improve reproducibility.
 
 ### 2. Quality Assessment
 
-Image quality was evaluated using cloud cover, geographic diversity, biome diversity, and temporal distribution.
+Image quality was evaluated using geographic diversity, biome diversity, cloud cover, and temporal distribution.
 
 ### 3. Representative Sampling
 
-A representative sampling strategy was designed to improve model generalization while reducing geographic bias.
+A representative sampling strategy was designed to improve spatial coverage and reduce sampling bias.
 
-### 4. Data Cube Generation
+### 4. Data Cube Construction
 
-Raster imagery was converted into an Xarray Data Cube for scalable multidimensional analysis.
+Raster datasets were converted into multidimensional Xarray Data Cubes for efficient geospatial analysis.
 
-### 5. Parallel Computing
+### 5. Parallel Processing
 
-Dask was used for chunked and parallel raster processing.
+Large raster datasets were processed using Dask to enable scalable computation.
 
-### 6. Cloud-Optimized Storage
+### 6. Cloud-Ready Storage
 
-Processed data were exported in Zarr format for efficient storage and future machine learning workflows.
+Processed datasets were stored in Zarr format for efficient access and compatibility with modern geospatial workflows.
 
 ### 7. Dataset Benchmarking
 
-GeoPrepBench was used to evaluate dataset readiness.
+GeoPrepBench was used to evaluate dataset readiness and overall quality.
 
-### 8. Flood Detection
+### 8. Flood Mapping
 
-Flood extent was mapped using multi-temporal NDWI change detection.
+Flood extent was detected using multi-temporal NDWI change detection derived from Sentinel-2 imagery.
 
 ### 9. Visualization
 
-The resulting flood mask was visualized using QGIS.
+Flood extent maps were visualized and exported using QGIS.
 
-## Results
+---
 
-### Flood Extent Map
-![Flood Map](screenshots/FloodMap.png)
+## 📊 Outputs
 
-## Skills Demonstrated
+The project produces:
 
-- Remote Sensing
+- Metadata Report
+- Quality Assessment Report
+- GeoPrepBench Report
+- NDWI Raster
+- Binary Flood Mask
+- Flood Extent Map
+
+---
+
+## 💡 Skills Demonstrated
+
 - Geospatial Data Engineering
+- Remote Sensing
 - Satellite Image Processing
-- Data Cube Construction
-- Parallel Computing
-- Cloud-ready Raster Storage
+- Raster Data Management
+- Xarray Data Cubes
+- Parallel Computing with Dask
+- Cloud-Ready Geospatial Storage
 - Flood Mapping
 - GIS Visualization
 - Python Development
-- Reproducible Workflows
+- Reproducible Geospatial Workflows
 
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
-- Semantic segmentation using U-Net
+- Sentinel-1 SAR flood mapping
+- U-Net based flood segmentation
 - Foundation Models for Earth Observation
-- Time-series flood monitoring
-- Cloud Optimized GeoTIFF generation
-- STAC integration
-- Machine Learning-based flood classification
+- STAC Catalog integration
+- Cloud Optimized GeoTIFF (COG) generation
+- Automatic flood area estimation by administrative boundary
+- Interactive web map visualization
 
 ---
 
-## Author
+## ▶️ How to Run
 
-Nivedita Vee
+### Clone the repository
 
-Geospatial Data Science | Remote Sensing | GIS | Machine Learning
+```bash
+git clone https://github.com/<your-username>/Geo-FM.git
+cd Geo-FM
+```
+
+### Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+### Activate the environment
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Linux/macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the workflow
+
+```bash
+python src/metadata.py
+python src/quality.py
+python src/sampling.py
+python src/datacube.py
+python src/dask_pipeline.py
+python src/zarr_export.py
+python src/geoprepbench.py
+python src/flood_mapping.py
+```
+
+---
+
+## 👩‍💻 Author
+
+**Nivedita Vee**
+
+Geospatial Data Science | Remote Sensing | GIS | Python | Machine Learning
+
+---
+
+## ⭐ Acknowledgements
+
+- Google Earth Engine
+- European Space Agency (Sentinel-2)
+- QGIS Community
+- Python Geospatial Ecosystem
